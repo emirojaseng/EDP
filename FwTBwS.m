@@ -30,7 +30,7 @@ for j=1:size(t,2)
     %Calcula los valorer en t+1 con diferencias finitas
     %Es en éste paso donde se usa el método Forward Time-Backward Space
     for i=(1+j):size(x,2)
-        Unuevo(i)=Uviejo(i)-c*lambda*(Uviejo(i)-Uviejo(i-1));
+        Unuevo(i)=Uviejo(i)-Uviejo(i)*lambda*(Uviejo(i)-Uviejo(i-1));
     end
     disp('listo')
     %hace el plot de lo que recién calculamos
